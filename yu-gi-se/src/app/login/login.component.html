@@ -1,9 +1,5 @@
-<div class="container">
-    <div class="img">
-        <img src="../../assets/img/seo.svg" class="image" alt="Faça seu login">
-    </div>
+<div class="container-main">
     <div class="forms">
-
         <form (ngSubmit)="login()" [formGroup]="loginForm" >
             <div class="logo">
                 <img  class="img-logo" src="../../assets/img/PngItem_1722626.png" alt="">
@@ -18,5 +14,16 @@
             </div>
             <button type="submit" class="btn btn-primary">Acess</button>
           </form>
+          <div class="link">
+            <p>
+              Not registered yet? <a routerLink="/register">come this way</a></p>
+          </div>
+          <p class="copy"> &copy; Ivan Vidal</p>
     </div>
+    <div class="img">
+      <img src="../../assets/img/seo.svg" class="image" alt="Faça seu login">
+    
+  </div>
+
+
 </div>

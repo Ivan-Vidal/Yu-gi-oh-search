@@ -1,0 +1,34 @@
+<div class="container-main">
+<div class="forms">
+    <form (ngSubmit)="register()" [formGroup]="loginForm">
+        <div class="logo">
+            <img  class="img-logo" src="../../assets/img/PngItem_1722626.png" alt="">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1"> Name</label>
+            <input type="text"  formControlName="name" name="name"  required class="form-control" >
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1"> Email</label>
+            <input type="email"  formControlName="email" name="email"  required class="form-control" >
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" formControlName="password" name="password"  required class="form-control" >
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password Confirm</label>
+            <input type="password" formControlName="confirma_password" name="confirma_password"  required class="form-control" >
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+    <div class="link">
+        <p>
+            already registered? <a routerLink="/login"> come this way</a></p>
+    </div>
+        <p class="copy"> &copy; Ivan Vidal</p>
+</div>
+<div class="img">
+    <img src="../../assets/img/password.svg" class="image" alt="error">
+</div>
+</div>

@@ -3,11 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService} from './auth/auth.service'
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
 { path: '', redirectTo: 'home',  canActivate: [AuthService], pathMatch: 'full'},
 { path: 'home', component: HomeComponent, canActivate: [AuthService] },
-{ path: 'login', component: LoginComponent},];
+{ path: 'login', component: LoginComponent},
+{ path: 'register', component: RegisterComponent},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
