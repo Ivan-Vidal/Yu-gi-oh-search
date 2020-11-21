@@ -8,14 +8,19 @@
           <button class="btn" type="button"><img class="lupa" src="../../assets/img/lupa.svg" alt=""></button>
       
       </div>
-      <div>
-        <ul>
+      <div class="container">
+        <ul class="row">
+          <div class="list-card" *ngFor="let card of card_info">
+          <div class="card-banner">
           <li>
             <div class="card">
-              <img src="" alt="">
-              <h3>Nome da carta</h3>
+              <img src="https://storage.googleapis.com/ygoprodeck.com/pics_small/{{card?.id}}.jpg" class="img-card" alt="{{card?.name}}">
+              <h3>{{card?.name}}</h3>
+              <a routerLink="/details">details this card </a>
             </div>
           </li>
+        </div>
+      </div>
         </ul>
       </div>
 </div>
