@@ -3,20 +3,34 @@
     <img class="img-logo" src="../../assets/img/PngItem_1722626.png" alt="">
   </div>
     <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Busque uma carta">
+        <input type="text" class="form-control"  [formControl]="queryField" placeholder="Busque uma carta">
       
-          <button class="btn" type="button"><img class="lupa" src="../../assets/img/lupa.svg" alt=""></button>
+          <button class="btn" type="button" (click)="onSearch()"><img class="lupa" src="../../assets/img/lupa.svg" alt=""></button>
       
       </div>
+      <hr>
       <div class="container">
+        <ul class="row" [hidden]="show">
+          <div class="list-card" *ngFor="let item of results$">
+          <div class="card-banner">
+          <li>
+            <div class="card">
+              <img src="https://storage.googleapis.com/ygoprodeck.com/pics_small/{{item?.id}}.jpg" class="img-card" alt="{{item?.name}}">
+              <h3>{{item?.name}}</h3>
+              <a routerLink="/details" (click)="onEdit(item.id)">details this card </a>
+            </div>
+          </li>
+        </div>
+      </div>
+        </ul>
         <ul class="row">
           <div class="list-card" *ngFor="let card of card_info">
           <div class="card-banner">
           <li>
             <div class="card">
-              <img src="https://storage.googleapis.com/ygoprodeck.com/pics_small/{{card?.id}}.jpg" class="img-card" alt="{{card?.name}}">
+              <img src="https://storage.googleapis.com/ygoprodeck.com/pics/{{card?.id}}.jpg" class="img-card" alt="{{card?.name}}">
               <h3>{{card?.name}}</h3>
-              <a routerLink="/details">details this card </a>
+              details<a routerLink="/details" (click)="onEdit(card.id)"><img src="../../assets/img/right-arrow.svg" class="seta" alt=""></a>
             </div>
           </li>
         </div>

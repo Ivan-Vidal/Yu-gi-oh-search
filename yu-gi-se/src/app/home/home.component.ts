@@ -19,9 +19,9 @@ export class HomeComponent implements OnInit {
   queryField = new FormControl();
 
   
-  readonly search_url = 'https://api.themoviedb.org/3/search/movie?api_key=9b273ba750e866b6a1e47e83f0a758fe';
+  readonly search_url = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?';
   
-  results$: Observable<any>;
+  results$: Observable<any[]>;
   
   total: number;
   
@@ -50,9 +50,8 @@ export class HomeComponent implements OnInit {
     this.show = !this.show;
     console.log(this.queryField.value)
     
-    this.results$ = this.http.get(this.search_url + '&query=' + this.queryField.value).pipe(
-      tap((res:any) => this.total = res.total_results),
-      map((res:any) =>  res.results)
+    this.results$ = this.http.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?name=' + this.queryField.value).pipe(
+      map((res:any) =>  this.results$ = res.data)
       )
       console.log(this.results$)
       

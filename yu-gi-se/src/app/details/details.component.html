@@ -1,1 +1,32 @@
-<p>details works!</p>
+<div class="container">
+    <div class="details" *ngFor="let item of detail">
+        <div >
+            <img src="https://storage.googleapis.com/ygoprodeck.com/pics_small/{{item.id}}.jpg" alt="{{item.name}}">
+            <h3>{{item.name}}</h3>
+        </div>
+        <hr>
+        <div class="atk-def" *ngIf="item.atk">
+            <div>
+            <h5>Attack</h5>
+            <p>{{item.atk}}</p>
+        </div>
+        <div>
+            <h5>Defense</h5>
+            <p>{{item.def}}</p>
+        </div>  
+      <div class="leval-card">
+            <h5>Level</h5>
+            <p class="level">{{item.level}}</p>
+        </div>
+    </div>
+        <div>
+            <h3>Descriptions</h3>
+            <p>{{item.desc}}</p>
+            
+        </div>
+    
+        <div>
+            <button routerLink="/home" class="btn btn-primary">Back</button>
+        </div>
+    </div>
+</div>

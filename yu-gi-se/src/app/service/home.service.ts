@@ -33,7 +33,7 @@ export class HomeService {
   
     
     loadById(id) {
-      return this.http.get<Cards[]>('https://api.themoviedb.org/3/movie/' + id + '?api_key=9b273ba750e866b6a1e47e83f0a758fe' ).pipe(retry(1),
+      return this.http.get<Cards[]>('https://db.ygoprodeck.com/api/v7/cardinfo.php?id=' + id).pipe(retry(1),
       catchError(this.utils.handleError)
       )
     }

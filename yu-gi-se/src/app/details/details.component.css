@@ -1,0 +1,24 @@
+.container{
+    text-align: center;
+    margin-top: 30px;
+    align-items: center;
+
+}
+.atk-def{
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+  
+}
+.atk-def h5{
+    margin-right: 20px;
+}
+.level{
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #c70916;
+    text-align: center;
+    margin-left: 10px;
+}

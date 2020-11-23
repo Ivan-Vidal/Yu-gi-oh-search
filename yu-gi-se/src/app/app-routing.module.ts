@@ -12,7 +12,7 @@ const routes: Routes = [
 { path: 'home', component: HomeComponent, canActivate: [AuthService] },
 { path: 'login', component: LoginComponent},
 { path: 'register', component: RegisterComponent},
-{ path: 'details', component: DetailsComponent},
+{ path: 'details/:id', component: DetailsComponent},
 ];
 
 @NgModule({
